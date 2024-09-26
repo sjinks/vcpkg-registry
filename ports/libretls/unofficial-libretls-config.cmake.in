@@ -1,0 +1,44 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+    find_dependency(OpenSSL)
+endif()
+
+get_filename_component(ROOT "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(ROOT "${ROOT}" PATH)
+get_filename_component(ROOT "${ROOT}" PATH)
+
+if(NOT TARGET unofficial::libretls::TLS)
+    if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+        add_library(unofficial::libretls::TLS STATIC IMPORTED)
+    else()
+        add_library(unofficial::libretls::TLS SHARED IMPORTED)
+    endif()
+
+    set_target_properties(unofficial::libretls::TLS PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${ROOT}/include")
+
+    if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+        set_target_properties(unofficial::libretls::TLS PROPERTIES INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:OpenSSL::SSL>;$<LINK_ONLY:OpenSSL::Crypto>")
+    endif()
+
+    macro(add_library_config config prefix)
+        set_property(TARGET unofficial::libretls::TLS APPEND PROPERTY IMPORTED_CONFIGURATIONS ${config})
+        set(library_dir "${ROOT}/${prefix}lib")
+        if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+            set_target_properties(unofficial::libretls::TLS PROPERTIES IMPORTED_LOCATION_${config} "${library_dir}/@VCPKG_TARGET_STATIC_LIBRARY_PREFIX@assh@VCPKG_TARGET_STATIC_LIBRARY_SUFFIX@")
+        else()
+            set_target_properties(unofficial::libretls::TLS PROPERTIES IMPORTED_LOCATION_${config} "${library_dir}/@VCPKG_TARGET_SHARED_LIBRARY_PREFIX@assh@VCPKG_TARGET_SHARED_LIBRARY_SUFFIX@")
+        endif()
+        unset(library_dir)
+    endmacro()
+
+    if("@VCPKG_BUILD_TYPE@" STREQUAL "" OR "@VCPKG_BUILD_TYPE@" STREQUAL "debug")
+        add_library_config(DEBUG "debug/")
+    endif()
+
+    if("@VCPKG_BUILD_TYPE@" STREQUAL "" OR "@VCPKG_BUILD_TYPE@" STREQUAL "release")
+        add_library_config(RELEASE "")
+    endif()
+endif()

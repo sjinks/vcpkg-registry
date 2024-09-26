@@ -1,0 +1,63 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+    if(@WITH_ZLIB@)
+        find_dependency(ZLIB)
+    endif()
+    if(@WITH_OPENSSL@)
+        find_dependency(OpenSSL)
+    endif()
+    if(@WITH_GCRYPT@)
+        pkg_check_modules(libgcrypt REQUIRED IMPORTED_TARGET libgcrypt)
+    endif()
+    if(@WITH_SODIUM@)
+        find_dependency(unofficial-sodium)
+    endif()
+endif()
+
+if(NOT TARGET unofficial::libassh::libassh)
+    get_filename_component(ROOT "${CMAKE_CURRENT_LIST_FILE}" PATH)
+    get_filename_component(ROOT "${ROOT}" PATH)
+    get_filename_component(ROOT "${ROOT}" PATH)
+
+    if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+        add_library(unofficial::libassh::libassh STATIC IMPORTED)
+    else()
+        add_library(unofficial::libassh::libassh SHARED IMPORTED)
+    endif()
+
+    set_target_properties(unofficial::libassh::libassh PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${ROOT}/include")
+
+    if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+        set(
+            libraries
+            $<LINK_ONLY:$<$<BOOL:@WITH_ZLIB@>:ZLIB::ZLIB>>
+            $<LINK_ONLY:$<$<BOOL:@WITH_OPENSSL@>:OpenSSL::Crypto>>
+            $<LINK_ONLY:$<$<BOOL:@WITH_GCRYPT@>:PkgConfig::libgcrypt>>
+            $<LINK_ONLY:$<$<BOOL:@WITH_SODIUM@>:unofficial-sodium::sodium>>
+        )
+        set_target_properties(unofficial::libassh::libassh PROPERTIES INTERFACE_LINK_LIBRARIES "${libraries}")
+        unset(libraries)
+    endif()
+
+    macro(add_library_config config prefix)
+        set_property(TARGET unofficial::libassh::libassh APPEND PROPERTY IMPORTED_CONFIGURATIONS ${config})
+        set(library_dir "${ROOT}/${prefix}lib")
+        if("@VCPKG_LIBRARY_LINKAGE@" STREQUAL "static")
+            set_target_properties(unofficial::libassh::libassh PROPERTIES IMPORTED_LOCATION_${config} "${library_dir}/@VCPKG_TARGET_STATIC_LIBRARY_PREFIX@assh@VCPKG_TARGET_STATIC_LIBRARY_SUFFIX@")
+        else()
+            set_target_properties(unofficial::libassh::libassh PROPERTIES IMPORTED_LOCATION_${config} "${library_dir}/@VCPKG_TARGET_SHARED_LIBRARY_PREFIX@assh@VCPKG_TARGET_SHARED_LIBRARY_SUFFIX@")
+        endif()
+        unset(library_dir)
+    endmacro()
+
+    if("@VCPKG_BUILD_TYPE@" STREQUAL "" OR "@VCPKG_BUILD_TYPE@" STREQUAL "debug")
+        add_library_config(DEBUG "debug/")
+    endif()
+
+    if("@VCPKG_BUILD_TYPE@" STREQUAL "" OR "@VCPKG_BUILD_TYPE@" STREQUAL "release")
+        add_library_config(RELEASE "")
+    endif()
+endif()

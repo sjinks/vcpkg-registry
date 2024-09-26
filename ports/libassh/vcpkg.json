@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "libassh",
+  "version": "1.1",
+  "description": "libassh is a free software library written in C that implements the Secure Shell protocol version 2.",
+  "homepage": "https://www.nongnu.org/libassh/",
+  "documentation": "https://www.nongnu.org/libassh/manual/",
+  "license": "LGPL-2.1-or-later",
+  "supports": "osx | linux",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    }
+  ],
+  "default-features": [
+    "client",
+    "key-create",
+    "key-validate",
+    "server",
+    "userauth-hostbased",
+    "userauth-keyboard",
+    "userauth-none",
+    "userauth-password",
+    "userauth-publickey",
+    "zlib"
+  ],
+  "features": {
+    "client": {
+      "description": "Enable SSH client support"
+    },
+    "gcrypt": {
+      "description": "Enable use of gcrypt support",
+      "dependencies": [
+        "libgcrypt"
+      ]
+    },
+    "key-create": {
+      "description": "Enable support for creating SSH keys"
+    },
+    "key-validate": {
+      "description": "Enable support for validating SSH keys"
+    },
+    "openssl": {
+      "description": "Enable use of OpenSSL support",
+      "dependencies": [
+        "openssl"
+      ]
+    },
+    "server": {
+      "description": "Enable SSH server support"
+    },
+    "sodium": {
+      "description": "Enable use of libsodium support",
+      "dependencies": [
+        "libsodium"
+      ]
+    },
+    "userauth-hostbased": {
+      "description": "Enable support for the 'hostbased' user authentication method"
+    },
+    "userauth-keyboard": {
+      "description": "Enable support for the 'keyboard' user authentication method"
+    },
+    "userauth-none": {
+      "description": "Enable support for the 'none' user authentication method"
+    },
+    "userauth-password": {
+      "description": "Enable support for the 'password' user authentication method"
+    },
+    "userauth-publickey": {
+      "description": "Enable support for the 'publickey' user authentication method"
+    },
+    "zlib": {
+      "description": "Enable use of the zlib library",
+      "dependencies": [
+        "zlib"
+      ]
+    }
+  }
+}

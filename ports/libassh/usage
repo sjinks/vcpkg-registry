@@ -1,0 +1,9 @@
+libassh provides CMake targets:
+
+  find_package(unofficial-libassh CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE unofficial::libassh::libassh)
+
+libassh provides pkg-config modules:
+
+  # The asynchronous ssh2 library
+  libassh

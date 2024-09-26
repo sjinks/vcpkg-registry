@@ -1,0 +1,9 @@
+libretls provides CMake targets:
+
+  find_package(unofficial-libretls CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE unofficial::libretls::TLS)
+
+libretls provides pkg-config modules:
+
+  # Secure communications using the TLS socket protocol.
+  libtls
