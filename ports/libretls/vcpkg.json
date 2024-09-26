@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "libretls",
   "version": "3.8.1",
+  "port-version": 1,
   "description": "LibreTLS is a port of libtls from LibreSSL to OpenSSL. libtls is “a new TLS library, designed to make it easier to write foolproof applications”.",
   "homepage": "https://git.causal.agency/libretls/about/",
   "license": "ISC",
