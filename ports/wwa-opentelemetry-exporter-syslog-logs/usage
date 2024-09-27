@@ -1,0 +1,9 @@
+wwa-opentelemetry-exporter-syslog-logs provides CMake targets:
+
+  find_package(wwa_opentelemetry_exporter_syslog_logs CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::opentelemetry::syslog_log_record_exporter)
+
+wwa-opentelemetry-exporter-syslog-logs provides pkg-config modules:
+
+  # Syslog logs exporter for OpenTelemetry
+  wwa_opentelemetry_exporter_syslog_logs
