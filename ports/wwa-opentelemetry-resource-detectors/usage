@@ -1,0 +1,9 @@
+wwa-opentelemetry-resource-detectors provides CMake targets:
+
+  find_package(wwa_opentelemetry_resource_detectors CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::opentelemetry::resource_detectors)
+
+wwa-opentelemetry-resource-detectors provides pkg-config modules:
+
+  # Resource Detectors for OpenTelemetry
+  wwa_opentelemetry_resource_detectors
