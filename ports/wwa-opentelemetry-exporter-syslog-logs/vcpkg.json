@@ -1,6 +1,8 @@
 {
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wwa-opentelemetry-exporter-syslog-logs",
   "version": "1.0.0.1",
+  "port-version": 1,
   "description": "A Syslog Exporter for OpenTelemetry Logs (C++)",
   "homepage": "https://github.com/sjinks/opentelemetry_exporter_syslog_logs",
   "license": "MIT",
