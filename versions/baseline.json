@@ -10,7 +10,7 @@
     },
     "wwa-opentelemetry-exporter-syslog-logs": {
       "baseline": "1.0.0.1",
-      "port-version": 1
+      "port-version": 2
     },
     "wwa-opentelemetry-resource-detectors": {
       "baseline": "1.0.2",
