@@ -1,11 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wwa-opentelemetry-resource-detectors",
-  "version": "1.0.1",
-  "port-version": 1,
+  "version": "1.0.2",
   "description": "Resource Detectors for OpenTelemetry",
   "homepage": "https://github.com/sjinks/opentelemetry-resource-detectors-cpp",
   "license": "MIT",
+  "supports": "linux, osx",
   "dependencies": [
     "opentelemetry-cpp",
     {
