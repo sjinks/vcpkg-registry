@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/opentelemetry_exporter_syslog_logs
-    REF v1.0.0.1
-    SHA512 ed736a126416f04dad3329a5e559762514f7dfed619b7ae581acfd639b3d34c4521bbaf1d0254ac298cc994a2bf02d2552057439ebd5b1f7b75e32cc71cd796d
+    REF v1.0.1
+    SHA512 4955997721f9b2e5e601d742de75036dce44f79c1a9406b9c2bf2b66152233b76b2a3178c5aaef24a3455f0199c6715235d4a8c50ebdf32ceaef2a22b50cb8e6
 )
 
 vcpkg_cmake_configure(
