@@ -1,0 +1,9 @@
+wwa-simple-threadpool provides CMake targets:
+
+  find_package(wwa-simple-threadpool CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::simple-threadpool)
+
+wwa-simple-threadpool provides pkg-config modules:
+
+  # libuv-like threadpool
+  wwa-simple-threadpool
