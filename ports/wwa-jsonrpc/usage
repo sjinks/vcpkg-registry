@@ -1,0 +1,9 @@
+wwa-jsonrpc provides CMake targets:
+
+  find_package(wwa_jsonrpc CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::jsonrpc)
+
+wwa-jsonrpc provides pkg-config modules:
+
+  # JSON-RPC 2.0 library
+  wwa_jsonrpc
