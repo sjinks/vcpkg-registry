@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/opentelemetry-resource-detectors-cpp
-    REF v1.0.2
-    SHA512 876f0d8d89104ec3115e6bc66666f7a262da1440bcbb8f740a6a0303149b800ea181a54e02d845e47499dca23bb9d2ba3cc7e0ad8efe4a83d5622f4a49b6562b
+    REF v1.0.4
+    SHA512 53c25a68a81a1a66ee243d64cd548d545812196cdee6f056970ecae42206dfea3a4d833620c42f8d5508d375e57b1eb784a4b8eea70468758f06cc352c7ae527
 )
 
 vcpkg_cmake_configure(
@@ -10,6 +10,7 @@ vcpkg_cmake_configure(
     OPTIONS
         -DWITH_TESTING=OFF
         -DWITH_EXAMPLES=OFF
+        -DWITH_MPH=OFF
 )
 
 vcpkg_cmake_install()
