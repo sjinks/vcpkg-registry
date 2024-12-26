@@ -8,6 +8,10 @@
       "baseline": "3.8.1",
       "port-version": 1
     },
+    "unixodbc": {
+      "baseline": "2.3.12",
+      "port-version": 0
+    },
     "wwa-jsonrpc": {
       "baseline": "1.0.1",
       "port-version": 0
