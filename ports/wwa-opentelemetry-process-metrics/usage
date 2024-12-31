@@ -1,0 +1,9 @@
+wwa-opentelemetry-process-metrics provides CMake targets:
+
+  find_package(wwa_opentelemetry_process_metrics CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::opentelemetry::process_metrics)
+
+wwa-opentelemetry-process-metrics provides pkg-config modules:
+
+  # OpenTelemetry Process Metrics library
+  wwa_opentelemetry_process_metrics

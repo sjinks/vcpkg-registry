@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "wwa-opentelemetry-process-metrics",
+  "version": "0.0.1",
+  "description": "Process metrics for OpenTelemetry",
+  "homepage": "https://github.com/sjinks/opentelemetry-process-metrics-cpp",
+  "license": "MIT",
+  "supports": "linux",
+  "dependencies": [
+    "opentelemetry-cpp",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
