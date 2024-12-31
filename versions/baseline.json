@@ -26,7 +26,7 @@
     },
     "wwa-opentelemetry-process-metrics": {
       "baseline": "0.0.1",
-      "port-version": 0
+      "port-version": 1
     },
     "wwa-opentelemetry-resource-detectors": {
       "baseline": "1.0.4",
