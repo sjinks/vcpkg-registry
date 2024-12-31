@@ -1,0 +1,4 @@
+wwa-opentelemetry-configurator provides CMake targets:
+
+  find_package(wwa_opentelemetry_configurator CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::opentelemetry::configurator)
