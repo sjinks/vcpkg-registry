@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/opentelemetry-process-metrics-cpp
-    REF 2791844dc4fcecc0513f6e53ac49a48f59e5cc5d
-    SHA512 db6d4eea28116db3731ee5b22710b5d9333d8023f04c33bcb5ee57287528275c3275ae7f5eda8492c526b4414a573c827bbf20541bf33c46a8e52bf6f60bb2b3
+    REF 7c835670bb4b1b31207bfbef9f6c86f5eaf07625
+    SHA512 75c2b064586fcead4a3d3215d0cda45bb737d0dbfab64b933c7858f2b6100ad2f4dfa0c5bf5c22ff50fa3d8bcbd77f29f7d55220c14eda3bfe2bfe24e80781e4
 )
 
 vcpkg_cmake_configure(
