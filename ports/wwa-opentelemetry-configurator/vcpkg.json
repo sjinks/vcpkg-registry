@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wwa-opentelemetry-configurator",
   "version": "0.0.1",
+  "port-version": 1,
   "description": "Simple configurator for OpenTelemetry",
   "homepage": "https://github.com/sjinks/opentelemetry-configurator-cpp/",
   "license": "MIT",
