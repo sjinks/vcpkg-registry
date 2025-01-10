@@ -13,7 +13,7 @@
       "port-version": 0
     },
     "wwa-jsonrpc": {
-      "baseline": "1.0.1",
+      "baseline": "2.0.0",
       "port-version": 0
     },
     "wwa-opentelemetry-configurator": {
