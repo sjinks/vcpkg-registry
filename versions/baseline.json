@@ -8,6 +8,10 @@
       "baseline": "3.8.1",
       "port-version": 1
     },
+    "nanodbc": {
+      "baseline": "2.14.0",
+      "port-version": 0
+    },
     "unixodbc": {
       "baseline": "2.3.12",
       "port-version": 0
