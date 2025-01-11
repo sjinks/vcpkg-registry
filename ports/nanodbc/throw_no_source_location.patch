@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d484c17..0006861 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -106,6 +106,8 @@ if(NANODBC_ENABLE_WORKAROUND_NODATA)
+ endif()
+ message(STATUS "nanodbc feature: Enable SQL_NO_DATA bug workaround - ${NANODBC_ENABLE_WORKAROUND_NODATA}")
+ 
++add_definitions(-DNANODBC_THROW_NO_SOURCE_LOCATION)
++
+ ########################################
+ ## find unixODBC or iODBC config binary
+ ########################################
