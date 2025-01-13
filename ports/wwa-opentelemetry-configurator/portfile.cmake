@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/opentelemetry-configurator-cpp
-    REF bf70cfa7bdd2289a1d2155c4b3bb3f4f87f75b01
-    SHA512 b4f0104dc48780e9cdae5accda8818a4d208592808a38ac37bbc970311cc61d5410312f655f6dc1bd3d406014e7b68f25968800f9fa77436bd75477be365c40a
+    REF 47ea0deffd1186636f482e32583fbe561f0a9ab7
+    SHA512 7bd4432cf8d88a9e312559c943da9b5351e19a9019a427253c4bb6739076e8da49991fae28caf8b839eb7dff4a1945e0c7cec5f64d06bba3d208c2b94a0ba6ba
 )
 
 vcpkg_cmake_configure(SOURCE_PATH "${SOURCE_PATH}")
