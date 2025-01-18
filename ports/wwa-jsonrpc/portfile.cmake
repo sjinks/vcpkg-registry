@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/jsonrpc-cpp
-    REF fb18b33a4d5190ca52da239cd214d9affa10de16 # v3.1.0
-    SHA512 22eab20577396052830860e0c74df9a5b89b9e92cab5b39e4e10db4ddff6412b03fd97cc43f7ba08e177e3c88177b8a4b9ba5831195e18358981e2f26e4ea4c7
+    REF fc20fd4f1277e25bf015b2cdf3da68315b06452d # v3.1.1
+    SHA512 5c6f4394616c77706bb8ddc2d1b522d09fc0d6cffc09fac703f2fbfee7d9f45ae4d0a1b12638b9caffd37a30bffe789b2374294615ea91f6d0a2b6356c9d1646
 )
 
 vcpkg_cmake_configure(
