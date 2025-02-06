@@ -1,0 +1,9 @@
+wwa-coro provides CMake targets:
+
+  find_package(wwa-coro CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa-coro)
+
+wwa-coro provides pkg-config modules:
+
+  # Yet Another C++20 Coroutine Library
+  wwa-coro
