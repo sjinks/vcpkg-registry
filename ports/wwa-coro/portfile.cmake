@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/coro-cpp
-    REF 2cb6b759bb441593d6cc7d6e3dee0c3e4e5fe455
-    SHA512 24e6e11aff41a5ab6feec4536b8d2eb79923e581b68f930ee62e125bb0e9bd1296f34efa37a8d658695d5ff719dd8fbf7c04f6fbf8e98557ba4a91b54108553d
+    REF 06119cc6c469a0679c0b702cd56b6c95bd5fae19
+    SHA512 2215257d94cf04f750bd942ac8ee2c02c2fcd72e98381d7e810f965b282d858afa818369e6fcc10742f9a19f2a92c7fa72b4ff2d2f408e3fa5f9fb1f1df2ec98
 )
 
 vcpkg_cmake_configure(
