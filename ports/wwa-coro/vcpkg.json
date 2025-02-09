@@ -2,12 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wwa-coro",
   "version": "0.0.1",
-  "port-version": 1,
+  "port-version": 2,
   "description": "Yet Another C++20 Coroutine Library",
   "homepage": "https://sjinks.github.io/coro-cpp/",
   "license": "MIT",
   "dependencies": [
-    "nlohmann-json",
     {
       "name": "vcpkg-cmake",
       "host": true
