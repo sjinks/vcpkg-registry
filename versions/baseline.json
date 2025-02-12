@@ -18,7 +18,7 @@
     },
     "wwa-coro": {
       "baseline": "0.0.1",
-      "port-version": 2
+      "port-version": 3
     },
     "wwa-jsonrpc": {
       "baseline": "3.1.1",
