@@ -1,0 +1,9 @@
+wwa-scope-action provides CMake targets:
+
+  find_package(wwa-scope-action CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE wwa::scope_action)
+
+wwa-scope-action provides pkg-config modules:
+
+  # Scope guard utilities for managing exit actions in C++
+  wwa-scope-action
