@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO sjinks/scope-action-cpp
-    REF v1.0.0
-    SHA512 fb47eb0fd9f52fe92f8d53907447574b604a1b20e435e5b61e21be44082ebcb7bd68a3e138bd20c7db10b84bd107ec552243a5660c7ff30bbafbfdd0fe875b59
+    REF v1.0.1
+    SHA512 d52976e40c63e9d2985163ca213794f646efa74fd5276c95c30428f7d667f6adfbc68d7b25c2bf2612d3d540464588d365b27caabd98017f3304df10bfbdbe96
 )
 
 vcpkg_cmake_configure(

@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wwa-scope-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scope guard utilities for managing exit actions in C++",
   "homepage": "https://sjinks.github.io/scope-action-cpp/",
   "license": "MIT",
